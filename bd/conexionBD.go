@@ -13,6 +13,7 @@ var MongoCN = ConectarBD()
 
 var clientOptions = options.Client().ApplyURI("mongodb+srv://frp466:africarubi2020@twitter.2oahp.mongodb.net/<dbname>?retryWrites=true&w=majority")
 
+//ConectarBD Metodo que nos permite conectarnos a la BD
 func ConectarBD() *mongo.Client {
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
@@ -28,6 +29,7 @@ func ConectarBD() *mongo.Client {
 	return client
 }
 
+//ChequeoConnection nos varifica la conexion
 func ChequeoConnection() int {
 	err := MongoCN.Ping(context.TODO(), nil)
 	if err != nil {
