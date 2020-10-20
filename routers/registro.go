@@ -8,7 +8,7 @@ import (
 	"github.com/FabrizzioRuiz/twitter/models"
 )
 
-/*Registro es la funcion para crear en la BD el registro de usuario */
+//Registro es la funcion  para crear en la BD el registro de usuario
 func Registro(w http.ResponseWriter, r *http.Request) {
 
 	var t models.Usuario
@@ -17,13 +17,13 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error en los datos recibidos "+err.Error(), 400)
 		return
 	}
-
 	if len(t.Email) == 0 {
-		http.Error(w, "El email de usuario es requerido", 400)
+		http.Error(w, "El email de usuario es requerido. Error: "+err.Error(), 400)
 		return
 	}
+
 	if len(t.Password) < 6 {
-		http.Error(w, "Debe especificar una contraseña de al menos 6 caracteres", 400)
+		http.Error(w, "Debe especificar una contraseña de al menos 6 caracteres. Error: "+err.Error(), 400)
 		return
 	}
 
@@ -35,14 +35,15 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 
 	_, status, err := bd.InsertoRegistro(t)
 	if err != nil {
-		http.Error(w, "Ocurrió un error al intentar realizar el registro de usuario "+err.Error(), 400)
+		http.Error(w, "Ocurrio un error al intentar realizar el registro de usuario."+err.Error(), 400)
 		return
 	}
 
 	if status == false {
-		http.Error(w, "No se ha logrado insertar el registro del usuario", 400)
+		http.Error(w, "No se ha logrado insertar el resgistro del usuario."+err.Error(), 400)
 		return
 	}
 
 	w.WriteHeader(http.StatusCreated)
+
 }

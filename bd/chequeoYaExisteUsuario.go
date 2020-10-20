@@ -8,12 +8,12 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-/*ChequeoYaExisteUsuario recibe un email de parámetro y chequea si ya está en la BD */
+/*ChequeoYaExisteUsuario recibe un email de parámetro y chequea si ya está en la BD(true) */
 func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
-	db := MongoCN.Database("twittor")
+	db := MongoCN.Database("twitter")
 	col := db.Collection("usuarios")
 
 	condicion := bson.M{"email": email}
@@ -23,8 +23,6 @@ func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 	err := col.FindOne(ctx, condicion).Decode(&resultado)
 	ID := resultado.ID.Hex()
 	if err != nil {
-		print(condicion)
-		print(err)
 		return resultado, false, ID
 	}
 	return resultado, true, ID
