@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-22T16:54:49.010Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36 Edg/96.0.1054.29" etag="NRVY6IIvqL0Mw0MVkmOb" version="15.8.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-22T17:06:31.015Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36 Edg/96.0.1054.29" etag="wOrx-4G7mM9CAfgcjdOu" version="15.8.3" type="github">
   <diagram id="-0o5cr4pHuKrgGTw2OSu" name="Page-1">
     <mxGraphModel dx="1026" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -23,10 +23,12 @@
         <mxCell id="5MsrHsCFOJDOxcr9_rJd-11" value="documentos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5MsrHsCFOJDOxcr9_rJd-4" target="5MsrHsCFOJDOxcr9_rJd-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5MsrHsCFOJDOxcr9_rJd-31" value="&lt;font style=&quot;font-size: 11px&quot;&gt;peticiones&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;fontSize=16;" edge="1" parent="1" source="5MsrHsCFOJDOxcr9_rJd-4" target="5MsrHsCFOJDOxcr9_rJd-30">
+        <mxCell id="5MsrHsCFOJDOxcr9_rJd-31" value="&lt;font style=&quot;font-size: 11px&quot;&gt;peticiones&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;fontSize=16;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5MsrHsCFOJDOxcr9_rJd-4" target="5MsrHsCFOJDOxcr9_rJd-30">
           <mxGeometry x="-0.1522" y="10" relative="1" as="geometry">
+            <mxPoint x="610" y="130" as="targetPoint" />
             <Array as="points">
               <mxPoint x="500" y="130" />
+              <mxPoint x="660" y="130" />
             </Array>
             <mxPoint x="1" as="offset" />
           </mxGeometry>
@@ -96,7 +98,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5MsrHsCFOJDOxcr9_rJd-30" value="EAI&lt;br&gt;Publicador&lt;br&gt;de peticiones&lt;br&gt;Core" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="640" y="87.5" width="80" height="80" as="geometry" />
+          <mxGeometry x="660" y="87.5" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5MsrHsCFOJDOxcr9_rJd-32" value="Otros &lt;br&gt;Suscriptores" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="800" y="87.5" width="120" height="85" as="geometry" />
